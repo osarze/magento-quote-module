@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="osarz_quote_email_template_customer"
+              label="Osarz Quote - Customer Email"
+              file="store_owner_to_customer.html" type="html"
+              module="osarz_quote" area="frontend"/>
+    <template id="osarz_quote_email_template_store_owner"
+              label="Osarz Quote - Store Owner Email"
+              file="customer_to_store_owner.html" type="html"
+              module="osarz_quote" area="frontend"/>
+</config>

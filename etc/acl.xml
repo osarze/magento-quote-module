@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/ etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Magento_Customer::customer">
+                    <resource id="Osarz_Quote::quote_manage"
+                              title="Manage Quote Request" />
+                </resource>
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id= "Osarz_Quote::quote"
+                                      title="Quote Request Section" />
+                        </resource>
+                    </resource>
+                </resource>
+                <!-- <resource id="Magento_Customer::customer">
+                    <resource id="Osarz_Quote::quote_manage" title="Manage Quote Request"/>
+                </resource> -->
+            </resource>
+        </resources>
+    </acl>
+</config>

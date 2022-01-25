@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name= "admin.block.quote.quote.grid.container">
+            <block class="Magento\Backend\Block\Widget\Grid"
+                   name="admin.block.helpdesk.ticket.grid" as="grid">
+                <arguments>
+                    <argument name="id" xsi:type="string">
+                        quoteGrid</argument>
+                    <argument name="dataSource" xsi:type="object">
+                        Osarz\Quote\Model\ResourceModel\Quote\Collection
+                    </argument>
+                    <argument name="default_sort"
+                              xsi:type="string">id</argument>
+                    <argument name="default_dir"
+                              xsi:type="string">desc</argument>
+                    <argument name="save_parameters_in_session"
+                              xsi:type="boolean">true</argument>
+                    <argument name="use_ajax"
+                              xsi:type="boolean">true</argument>
+                </arguments>
+                <block class="Magento\Backend\Block\Widget\Grid\ColumnSet"
+                       name= "admin.block.quote.quote.grid.columnSet" as="grid.columnSet">
+                    <block class="Magento\Backend\Block\Widget\Grid\Column" as="ticket_id">
+                        <arguments>
+                            <argument name="header" xsi:type="string"
+                                      translate="true">ID</argument>
+                            <argument name="type" xsi:type="string">number</argument>
+                            <argument name="id" xsi:type="string">id</argument>
+                            <argument name="index" xsi:type="string">id</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Backend\Block\Widget\Grid\Column" as="title">
+                        <arguments>
+                            <argument name="header" xsi:type="string"
+                                      translate="true">FirstName</argument>
+                            <argument name="type" xsi:type="string">string</argument>
+                            <argument name="id" xsi:type="string">first_name</argument>
+                            <argument name="index" xsi:type="string">first_name</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Backend\Block\Widget\Grid\Column" as="title">
+                        <arguments>
+                            <argument name="header" xsi:type="string"
+                                      translate="true">Last Name</argument>
+                            <argument name="type" xsi:type="string">string</argument>
+                            <argument name="id" xsi:type="string">last_name</argument>
+                            <argument name="index" xsi:type="string">last_name</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Backend\Block\Widget\Grid\Column" as="title">
+                        <arguments>
+                            <argument name="header" xsi:type="string"
+                                      translate="true">Email</argument>
+                            <argument name="type" xsi:type="string">string</argument>
+                            <argument name="id" xsi:type="string">email</argument>
+                            <argument name="index" xsi:type="string">email</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Backend\Block\Widget\Grid\Column" as="title">
+                        <arguments>
+                            <argument name="header" xsi:type="string"
+                                      translate="true">Phone</argument>
+                            <argument name="type" xsi:type="string">string</argument>
+                            <argument name="id" xsi:type="string">phone_number</argument>
+                            <argument name="index" xsi:type="string">phone_number</argument>
+                        </arguments>
+                    </block>
+
+
+                    <block class="Magento\Backend\Block\Widget\Grid\Column" as="action">
+                        <arguments>
+                            <argument name="id" xsi:type="string">action</argument>
+                            <argument name="header" xsi:type="string"
+                                      translate="true">Action</argument>
+                            <argument name="type" xsi:type="string">action</argument>
+                            <argument name="getter" xsi:type="string">getId</argument>
+                            <argument name="filter" xsi:type="boolean">false</argument>
+                            <argument name="sortable" xsi:type="boolean">false</argument>
+                            <argument name="actions" xsi:type="array">
+                                <item name="view_action" xsi:type="array">
+                                    <item name="caption" xsi:type="string"
+                                          translate="true">Close</item>
+                                    <item name="url" xsi:type="array">
+                                        <item name="base" xsi:type="string">*/*/close</item>
+                                    </item>
+                                    <item name="field" xsi:type="string">id</item>
+                                </item>
+                            </argument>
+                            <argument name="header_css_class" xsi:type="string"> colactions</argument>
+                            <argument name="column_css_class" xsi:type="string"> colactions</argument>
+                        </arguments>
+                    </block>
+                </block>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

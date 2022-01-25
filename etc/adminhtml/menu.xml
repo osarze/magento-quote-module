@@ -1,0 +1,9 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Osarz_Quote::quote_manage" title="Quote Requests" module="Osarz_Quote"
+             parent="Magento_Customer::customer"
+             action="osarz_quote/quote/index"
+             resource="Osarz_Quote::quote_manage"/>
+    </menu>
+</config>
